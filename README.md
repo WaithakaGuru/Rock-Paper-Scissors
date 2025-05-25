@@ -29,7 +29,7 @@ An RPS GAME Project to help solidify JS concept on:
 
 1. First clone this repository and navigate into the target directory
 ```bash
-git clone https://github.com/arman-develops/rock-paper-scissors.git
+git clone https://github.com/WaithakaGuru/rock-paper-scissors.git
 ```
 ```bash
 cd rock-paper-scissors
