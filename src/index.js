@@ -16,9 +16,9 @@ const compMoveImage = document.getElementById("comp-move");
 const playerMoveImage = document.getElementById("player-move");
 
 const moveImages = {
-  Rock: "../public/Rock-emoji.png",
-  Paper: "../public/Paper-emoji.png",
-  Scissors: "../public/Scissors-emoji.png",
+  Rock: "./Rock-emoji.png",
+  Paper: "./Paper-emoji.png",
+  Scissors: "./Scissors-emoji.png",
 };
 
 let Rounds = 1;
@@ -56,14 +56,12 @@ function getComputerMove() {
     ? moves[randomVal]
     : "Error getting Computer move!!";
 }
-console.log(getComputerMove());
 
 function getComputer2Move() {
   const Moves = ["Rock", "Paper", "Scissors"];
   const idx = Math.floor(Math.random() * Moves.length);
   return Moves[idx];
 }
-console.log(getComputer2Move());
 
 function getWinner(player1Move, player2Move) {
   if (player1Move === player2Move) return "Draw";
@@ -79,16 +77,9 @@ function getWinner(player1Move, player2Move) {
   }
   return `Player 2`;
 }
-console.log(getWinner(getComputerMove(), getComputer2Move()));
 
 function updateScore(winStatus, status = 1) {
   if (Scores.hasOwnProperty(winStatus)) Scores[winStatus] += 1;
-  if (status === 0)
-    Scores = {
-      Draw: 0,
-      "Player 1": 0,
-      "Player 2": 0,
-    };
   updateUI();
   return Scores;
 }
@@ -128,5 +119,3 @@ rockBtn.addEventListener("click", () => playGame("Rock"));
 paperBtn.addEventListener("click", () => playGame("Paper"));
 scissorsBtn.addEventListener("click", () => playGame("Scissors"));
 resetScoreBtn.addEventListener("click", resetScore);
-
-
