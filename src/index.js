@@ -16,9 +16,9 @@ const compMoveImage = document.getElementById("comp-move");
 const playerMoveImage = document.getElementById("player-move");
 
 const moveImages = {
-  Rock: "./Rock-emoji.png",
-  Paper: "./Paper-emoji.png",
-  Scissors: "./Scissors-emoji.png",
+  Rock: "../public/Rock-emoji.png",
+  Paper: "../public/Paper-emoji.png",
+  Scissors: "../public/Scissors-emoji.png",
 };
 
 let Rounds = 1;
@@ -124,10 +124,9 @@ function playGame(player1Move) {
   updateUI();
 }
 
-function play() {
-  rockBtn.addEventListener("click", () => playGame("Rock"));
-  paperBtn.addEventListener("click", () => playGame("Paper"));
-  scissorsBtn.addEventListener("click", () => playGame("Scissors"));
-  resetScoreBtn.addEventListener("click", resetScore);
-}
-play();
+rockBtn.addEventListener("click", () => playGame("Rock"));
+paperBtn.addEventListener("click", () => playGame("Paper"));
+scissorsBtn.addEventListener("click", () => playGame("Scissors"));
+resetScoreBtn.addEventListener("click", resetScore);
+
+
