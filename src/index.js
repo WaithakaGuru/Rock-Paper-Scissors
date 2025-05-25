@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 const rockBtn = document.getElementById("rock-button");
 const paperBtn = document.getElementById("paper-button");
 const scissorsBtn = document.getElementById("scissors-button");
@@ -119,3 +120,4 @@ rockBtn.addEventListener("click", () => playGame("Rock"));
 paperBtn.addEventListener("click", () => playGame("Paper"));
 scissorsBtn.addEventListener("click", () => playGame("Scissors"));
 resetScoreBtn.addEventListener("click", resetScore);
+});
