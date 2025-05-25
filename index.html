@@ -6,10 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock With Me</title>
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+     href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" 
+    rel="stylesheet">
   </head>
   <body>
     <div id="container" class="container">
-
+      <div class="header">
+        <h3>&copy; 2025 <a href="https://www.linkedin.com/in/waithaka-amos-b2b80a255/" target="_blank" title="See Creator Details">Waithaka Amos</a></h3>
+        <div class="game-mode">
+          <p>Game mode:</p>
+          <button class="game-mode-btn" id="computer-autoplay">Normal Mode</button>
+        </div>
+        <button id="reset-score">Reset Score</button>
+      </div>
+     <main>
+        <section class="game-play">
+          <div class="computer-side">
+            <div class="computer-card">
+              <p>Computer</p>
+              <div class="move-image-holder">
+                <i class="fa-solid fa-robot" id="comp-icon"></i>
+                <img src="./Rock-emoji.png" alt="💻" class="none" id="comp-move">
+              </div>
+            </div>
+          </div>
+          <div class="victory-banner">
+            <p id="winner-status">Currently draw</p>
+          </div>
+          <div class="player-side">
+            <div class="player-card">
+              <p>Player</p>
+              <div class="move-image-holder">
+                <i class="fa-solid fa-user-secret" id="player-icon"></i>
+                <img src="./Rock-emoji.png" alt="🧸"  class="none" id="player-move">
+              </div>
+            </div>
+            <div class="player-buttons-holder">
+              <button id="rock-button" class="player-button">
+                <img src="./Rock-emoji.png" alt="Rock button image">
+                <span>Rock</span>
+              </button>
+              <button id="paper-button" class="player-button">
+                <img src="./Paper-emoji.png" alt="Paper button image">
+                <span>Paper</span>
+              </button>
+              <button id="scissors-button" class="player-button">
+                <img src="./Scissors-emoji.png" alt="Scissors button image">
+                <span>Scissors</span>
+              </button></div>
+          </div>
+        </section>
+  
+        <section class="game-stats">
+         <div>
+            <h3>Game Stats</h3>
+            <span>
+              <h4>Rounds: </h4>
+              <span id="rounds">1</span>
+            </span>
+         </div>
+          <div class="scores">
+            <div>
+              <p>Wins:</p>
+              <span id="computer-wins">0</span>
+            </div>
+            <div>
+              <p>Losses:</p>
+              <span id="computer-losses">0</span>
+            </div>
+          </div>
+          <div class="draws">
+            <p>Draws: </p>
+            <span id="draws">0</span>
+          </div>
+          <div class="scores">
+            <div>
+              <p>Wins:</p>
+              <span id="player-wins">0</span>
+            </div>
+            <div>
+              <p>Losses:</p>
+              <span id="player-losses">0</span>
+            </div>
+          </div>
+        </section>
+     </main>
 
     </div>
     <script src="./src/index.js"></script>

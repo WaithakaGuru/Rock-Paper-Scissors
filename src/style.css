@@ -7,4 +7,217 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --back-color: #708090;
+  --text-color: #fafafa;
+  --comp-back-color: #d3d3d3;
+  --player-back-color: #e0e0e0;
+  --victory-banner-back-color: #ffa500;
+  --victory-txt: #111121;
+  --btn-hover-color: #b0e0e6;
+  --play-btn-border-color: #696969;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Press Start 2P', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  padding: 0 10%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: var(--text-color)
+}
+/* Custom Classes for JS targeting */
+  .flex{
+    display: flex;
+  }
+  .none{
+    display: none;
+  }
+/* End of Custom Classes */
+
+.container{
+  padding:0 0 1rem;
+  width: 90rem;
+  background-color: var(--back-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  height: 5rem;
+  align-items: center;
+}
+
+.container main{
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+}
+.header button{
+  font-size: 1rem;
+
+}
+
+section.game-play{
+  display: flex;
+  width: 70%;
+  max-width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+section.game-play .header h3{
+  font-size: 1.5rem;
+}
+button{
+  padding: 1rem 2rem;
+  background-color: whitesmoke;
+  border: none;
+  margin: 1rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(23, 87, 127);
+  cursor: pointer;
+  transition: scale .4s ease-in-out;
+}
+
+button:hover{
+  background-color: var(--btn-hover-color);
+}
+button:active{
+  scale: .9;
+}
+p, i{
+  font-size: 2rem;
+  display: inline;
+}
+
+.computer-side, .player-side{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.player-card, .computer-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  gap: .75rem;
+  align-self: center;
+}
+
+.move-image-holder{
+  border: 2px dashed var(--victory-txt);
+  padding: 2rem 3rem;
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ .move-image-holder i{
+    font-size: 6rem; 
+    color: rgb(242, 145, 9)
+ }
+
+.move-image-holder img{
+  width: 10rem;
+  margin: 0 3rem;
+}
+
+.computer-side{
+  height: 30%;
+  background-color: var(--comp-back-color);
+  color: var(--victory-txt);
+}
+
+.victory-banner{
+  background-color: var(--victory-banner-back-color);
+  color: var(--victory-txt);
+  padding: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.victory-banner p{
+  font-size: 2.5rem;
+}
+
+.player-side{
+  padding: 4rem;
+  height: 52.5%;
+  background-color: var(--player-back-color);
+  color: var(--victory-txt);
+  justify-content: space-around;
+}
+
+.player-buttons-holder{
+  display: flex;
+  gap: .7rem;
+  margin: 2rem 0;
+}
+
+.player-buttons-holder .player-button{
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 14rem;
+}
+
+.player-button img{
+  width: 7rem;
+  object-fit: cover;
+  margin: 2rem 0;
+}
+
+.player-button span{
+  text-align: center;
+}
+
+section.game-stats{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+  background-color: rgb(151, 163, 175);
+  min-width: 30%;
+  color: rgb(23, 87, 127);
+  font-size: 1.5rem;
+  max-height: 95%;
+}
+
+section.game-stats h3{
+  font-size: 1.7rem;
+  text-decoration: underline 2px var(--victory-txt);
+}
+
+h4{
+  display: inline;
+}
+.game-stats span{
+  color: var(--victory-txt)
 }
