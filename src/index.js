@@ -128,5 +128,3 @@ rockBtn.addEventListener("click", () => playGame("Rock"));
 paperBtn.addEventListener("click", () => playGame("Paper"));
 scissorsBtn.addEventListener("click", () => playGame("Scissors"));
 resetScoreBtn.addEventListener("click", resetScore);
-
-
