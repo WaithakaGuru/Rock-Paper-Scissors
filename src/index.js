@@ -17,9 +17,9 @@ const compMoveImage = document.getElementById("comp-move");
 const playerMoveImage = document.getElementById("player-move");
 
 const moveImages = {
-  Rock: "./Rock-emoji.png",
-  Paper: "./Paper-emoji.png",
-  Scissors: "./Scissors-emoji.png",
+  "Rock": "./Rock-emoji.png",
+  "Paper": "./Paper-emoji.png",
+  "Scissors": "./Scissors-emoji.png",
 };
 
 let Rounds = 1;
@@ -44,7 +44,6 @@ function resetScore() {
 function getRandomVal() {
   return Math.trunc(((Math.random() * 1800) % 3) + 1);
 }
-console.log(getRandomVal());
 
 function getComputerMove() {
   const randomVal = getRandomVal();
